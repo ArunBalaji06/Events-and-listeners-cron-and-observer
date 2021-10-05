@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,13 @@ Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/post-login',[AuthController::class,'postLogin'])->name('post-login');
 
 Route::get('/calculate-age/{name}',[AuthController::class,'calculateAge'])->name('calculate-age');
+
+Route::get('/file-import-export-page',[FileController::class,'getPage'])->name('file.page');
+Route::post('/file-submit',[FileController::class,'submitFile'])->name('file.submit');
+Route::get('/download-csv',[FileController::class,'exportCSV'])->name('file.csv');
+
+
+
 
 
 
