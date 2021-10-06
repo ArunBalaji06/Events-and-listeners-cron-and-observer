@@ -55,43 +55,4 @@
         <a href='/download-csv' class="btn btn-primary">Download File</a>
     </div>
 </body>
-<!-- <script>
-    $(document).ready( function () {
-    $('#myTable').DataTable();
-} );
-
-$("#form1").on("submit",function(e){
-    e.preventDefault();
-    $.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
-let formData = new FormData(this);
-    $.ajax({
-        type: "post",
-        url: '/file-submit',
-        data: formData,
-        contentType: false,
-        processData: false,
-        dataType:"json",
-        success: function (data){
-           var id;
-            var name;
-            for(i=0; i<data.body.length; i++){
-                console.log(data);
-                doc = data.body[i]['name'];
-                id = data.body[i]['id']
-                console.log(doc);
-                $("#insert").after(doc)
-            }
-
-        }
-    }); -->
-
-<!-- });
-; -->
-
-
-</script>
 </html>
