@@ -22,7 +22,7 @@ class FileController extends Controller
 
     public function submitFile(Request $request) {
         Excel::import(new FileImport,$request->file);
-        $lastImport = $this->file->orderBy('created_at','desc')->take(1)->get();
+        // $lastImport = $this->file->orderBy('created_at','desc')->take(1)->get();
        return back();
     }
 
